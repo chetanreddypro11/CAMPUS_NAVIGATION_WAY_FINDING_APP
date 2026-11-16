@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CampusWay: search any building at Polaris School of Technology, see it on the map and follow walking steps to it.">
+  <title>CampusWay | Polaris School of Technology</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#explore">Skip to the map and search</a>
+
+  <nav class="navbar navbar-expand-lg site-nav sticky-top">
+    <div class="container-xxl">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#top">
+        <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="15" fill="#0E7C7B"/><path d="M15 6c-3.9 0-7 3-7 6.8C8 18 15 25 15 25s7-7 7-12.2C22 9 18.9 6 15 6z" fill="#fff"/><circle cx="15" cy="12.8" r="2.6" fill="#0E7C7B"/></svg>
+        <span><span class="brand-name">CampusWay</span><span class="brand-sub d-none d-sm-block">Polaris School of Technology</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#explore" data-view="places">Find a place</a></li>
+          <li class="nav-item"><a class="nav-link" href="#explore" data-view="route">Plan a route</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container-xxl">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <h1 class="hero-title">Find any building at Polaris School of Technology.</h1>
+          <p class="hero-lead">Search a place, see it on the map and follow numbered walking steps from the Main Gate or anywhere on campus. No need to ask for directions.</p>
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a class="btn btn-light btn-lg" href="#explore" data-view="places">Find a place</a>
+            <a class="btn btn-outline-light btn-lg" href="#explore" data-view="route">Plan a route</a>
+          </div>
+          <p class="hero-label" id="popular-label">Popular searches</p>
+          <ul class="list-unstyled d-flex flex-wrap gap-2 mb-0" id="popular" aria-labelledby="popular-label"></ul>
+        </div>
+        <div class="col-lg-5 d-none d-lg-block" aria-hidden="true">
+          <svg viewBox="0 0 400 260" class="hero-art">
+            <g fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".25"><rect x="60" y="30" width="70" height="50" rx="6"/><rect x="170" y="150" width="80" height="55" rx="6"/><rect x="300" y="110" width="70" height="60" rx="6"/><rect x="40" y="130" width="60" height="50" rx="6"/><rect x="190" y="30" width="60" height="45" rx="6"/></g>
+            <path d="M40 215 H150 V120 H280 V55 H352" fill="none" stroke="#FF6B6B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="14 12"/>
+            <circle cx="40" cy="215" r="16" fill="#fff"/><text x="40" y="221" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="16" fill="#0F172A">A</text>
+            <circle cx="352" cy="55" r="16" fill="#fff"/><text x="352" y="61" text-anchor="middle" font-family="sans-serif" font-weight="700" font-size="16" fill="#0F172A">B</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="explore" class="container-xxl py-4">
+    <div class="btn-group w-100 mb-3 view-switch" role="group" aria-label="Choose a view">
+      <button type="button" class="btn btn-outline-dark active" id="tab-places" aria-pressed="true">Places</button>
+      <button type="button" class="btn btn-outline-dark" id="tab-route" aria-pressed="false">Route</button>
+      <button type="button" class="btn btn-outline-dark d-lg-none" id="tab-map" aria-pressed="false">Map</button>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-5 col-xl-4">
+        <section id="pane-places" class="pane is-active" aria-labelledby="places-title">
+          <h2 class="h4" id="places-title">Find a place</h2>
+          <form role="search" id="search-form" class="mb-2">
+            <label for="search" class="form-label fw-semibold">Search by name or category</label>
+            <input id="search" type="search" class="form-control" placeholder="Try &quot;lib&quot; or &quot;canteen&quot;" autocomplete="off">
+          </form>
+          <div id="recent" class="mb-2"></div>
+          <div class="mb-2">
+            <label for="category" class="form-label fw-semibold">Category</label>
+            <select id="category" class="form-select">
+              <option value="all">All categories</option>
+            </select>
+          </div>
+          <p id="count" class="small text-secondary mb-2" role="status" aria-live="polite"></p>
+          <div id="storage-alert"></div>
+          <div id="message"></div>
+          <ul id="place-list" class="list-group place-list"></ul>
+        </section>
+
+        <section id="pane-route" class="pane" aria-labelledby="route-heading">
+          <h2 class="h4" id="route-heading">Plan a route</h2>
+          <form id="route-form" novalidate>
+            <div class="mb-2">
+              <label for="start" class="form-label fw-semibold">Start</label>
+              <select id="start" class="form-select" aria-describedby="start-error"></select>
+              <div class="invalid-feedback" id="start-error"></div>
+            </div>
+            <button type="button" class="btn btn-sm btn-outline-secondary mb-2" id="swap">Swap start and destination</button>
+            <div class="mb-2">
+              <label for="end" class="form-label fw-semibold">Destination</label>
+              <select id="end" class="form-select" aria-describedby="end-error"></select>
+              <div class="invalid-feedback" id="end-error"></div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="stepfree">
+              <label class="form-check-label" for="stepfree">Step-free route only (ramps and level paths)</label>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-primary flex-grow-1">Show route</button>
+              <button type="button" class="btn btn-outline-secondary" id="clear-route">Clear</button>
+            </div>
+          </form>
+          <div id="route-message" class="mt-3"></div>
+          <p id="route-status" class="visually-hidden" role="status" aria-live="polite"></p>
+          <div id="route-result" class="mt-3" hidden>
+            <h3 class="h5" id="route-title" tabindex="-1"></h3>
+            <div class="stats" id="route-stats"></div>
+            <ol class="steps" id="route-steps"></ol>
+            <p class="arrival" id="route-arrival"></p>
+            <div class="d-flex flex-wrap gap-2 no-print">
+              <button type="button" class="btn btn-primary d-lg-none" id="view-on-map">View on map</button>
+              <button type="button" class="btn btn-outline-secondary" id="copy-link">Copy route link</button>
+              <button type="button" class="btn btn-outline-secondary" id="print-route">Print</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-lg-7 col-xl-8">
+        <section id="pane-map" class="pane" aria-label="Campus map">
+          <div id="map" role="region" aria-label="Interactive campus map. Pins can be reached with the Tab key."></div>
+          <div id="place-card" class="card mt-3" hidden></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer id="about" class="site-footer">
+    <div class="container-xxl py-4">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <h2 class="h5">About CampusWay</h2>
+          <p class="mb-2">A wayfinding page for students and visitors of Polaris School of Technology. The campus is a fictional sample: <span id="stats"></span></p>
+          <p class="mb-0 small">Walking time assumes about 80 m per minute. Routes use the shortest walkway path and, when two paths are equal, the one with fewer steps.</p>
+        </div>
+        <div class="col-md-6">
+          <h2 class="h5">Good to know</h2>
+          <ul class="mb-0 small">
+            <li>Outdoor routes only. No live GPS or indoor floor plans.</li>
+            <li>Saved places and recent searches stay in this browser only.</li>
+            <li>Facilities can update every place and walkway in one file: data/places.json.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast-container position-fixed bottom-0 start-50 translate-middle-x p-3" id="toasts"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

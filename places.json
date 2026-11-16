@@ -1,0 +1,528 @@
+{
+  "campus": "Polaris School of Technology",
+  "note": "Fictional sample campus. x and y are percentages (0-100) of the campus map; x runs left to right, y runs top to bottom. Distances use 1 map unit = 4 m, rounded to 5 m.",
+  "categories": [
+    {
+      "categoryId": "academic",
+      "label": "Academic"
+    },
+    {
+      "categoryId": "hostel",
+      "label": "Hostel"
+    },
+    {
+      "categoryId": "food",
+      "label": "Food"
+    },
+    {
+      "categoryId": "admin",
+      "label": "Admin"
+    },
+    {
+      "categoryId": "sports",
+      "label": "Sports"
+    }
+  ],
+  "places": [
+    {
+      "placeId": "p01",
+      "name": "Main Gate",
+      "category": "admin",
+      "description": "Main entry point to Polaris School of Technology, with a security desk and visitor registration.",
+      "x": 50,
+      "y": 94,
+      "entranceNote": "Pedestrian gate on the right of the vehicle barrier; open 6 am to 10 pm.",
+      "accessible": true
+    },
+    {
+      "placeId": "p02",
+      "name": "Admissions Office",
+      "category": "admin",
+      "description": "Enquiries, application support and campus tours for prospective students.",
+      "x": 36,
+      "y": 84,
+      "entranceNote": "Enter through the glass door facing Gate Plaza.",
+      "accessible": true
+    },
+    {
+      "placeId": "p03",
+      "name": "Student Affairs",
+      "category": "admin",
+      "description": "ID cards, fee queries, certificates and student support desk.",
+      "x": 64,
+      "y": 84,
+      "entranceNote": "Ground-floor counter; take the ramp on the left of the steps.",
+      "accessible": true
+    },
+    {
+      "placeId": "p04",
+      "name": "Main Library",
+      "category": "academic",
+      "description": "Reading halls, digital catalogue and silent study rooms.",
+      "x": 38,
+      "y": 60,
+      "entranceNote": "Main entrance faces Central Avenue; ramp on the east side.",
+      "accessible": true
+    },
+    {
+      "placeId": "p05",
+      "name": "Lecture Hall A",
+      "category": "academic",
+      "description": "Large lecture hall with 300 seats, used for first-year core classes.",
+      "x": 62,
+      "y": 58,
+      "entranceNote": "Use the south entrance ramp.",
+      "accessible": true
+    },
+    {
+      "placeId": "p06",
+      "name": "Computer Lab",
+      "category": "academic",
+      "description": "Programming and networking labs open for scheduled practicals.",
+      "x": 38,
+      "y": 42,
+      "entranceNote": "Entrance is on the west side of the building.",
+      "accessible": true
+    },
+    {
+      "placeId": "p07",
+      "name": "Innovation Lab",
+      "category": "academic",
+      "description": "Hardware prototyping, 3D printers and project workspace.",
+      "x": 62,
+      "y": 42,
+      "entranceNote": "Roll-up door on the plaza side; swipe your ID to enter.",
+      "accessible": true
+    },
+    {
+      "placeId": "p08",
+      "name": "Admin Block",
+      "category": "admin",
+      "description": "Director, registrar and accounts offices.",
+      "x": 50,
+      "y": 10,
+      "entranceNote": "Main doors face south; reception is on the left.",
+      "accessible": true
+    },
+    {
+      "placeId": "p09",
+      "name": "Main Canteen",
+      "category": "food",
+      "description": "Meals, snacks and tea for students and staff throughout the day.",
+      "x": 10,
+      "y": 70,
+      "entranceNote": "Open-air entrance next to the west walkway.",
+      "accessible": true
+    },
+    {
+      "placeId": "p10",
+      "name": "Food Court",
+      "category": "food",
+      "description": "Multiple counters with quick meals and a covered seating area.",
+      "x": 14,
+      "y": 56,
+      "entranceNote": "Enter from the walkway side; seating is step-free.",
+      "accessible": true
+    },
+    {
+      "placeId": "p11",
+      "name": "Hostel Block A",
+      "category": "hostel",
+      "description": "Student residence with common room and laundry.",
+      "x": 10,
+      "y": 30,
+      "entranceNote": "Entrance at the front; sign in at the warden desk.",
+      "accessible": true
+    },
+    {
+      "placeId": "p12",
+      "name": "Hostel Block B",
+      "category": "hostel",
+      "description": "Student residence with study lounge and mess hall.",
+      "x": 12,
+      "y": 44,
+      "entranceNote": "Entrance at the front; sign in at the warden desk.",
+      "accessible": true
+    },
+    {
+      "placeId": "p13",
+      "name": "Sports Complex",
+      "category": "sports",
+      "description": "Indoor courts, track and equipment room.",
+      "x": 90,
+      "y": 70,
+      "entranceNote": "Main entrance on the west side, near the car park.",
+      "accessible": true
+    },
+    {
+      "placeId": "p14",
+      "name": "Fitness Centre",
+      "category": "sports",
+      "description": "Gym with weights, cardio machines and a trainer on duty.",
+      "x": 88,
+      "y": 54,
+      "entranceNote": "Entrance faces the east walkway.",
+      "accessible": true
+    },
+    {
+      "placeId": "p15",
+      "name": "Basketball Courts",
+      "category": "sports",
+      "description": "Two outdoor courts, open from early morning until sunset.",
+      "x": 92,
+      "y": 38,
+      "entranceNote": "Open access from the walkway; no gate.",
+      "accessible": true
+    },
+    {
+      "placeId": "p16",
+      "name": "Seminar Hall",
+      "category": "academic",
+      "description": "Venue for guest talks, workshops and placement briefings.",
+      "x": 64,
+      "y": 28,
+      "entranceNote": "Entrance has steps; the accessible entrance is not yet mapped.",
+      "accessible": false
+    },
+    {
+      "placeId": "p17",
+      "name": "Research Centre",
+      "category": "academic",
+      "description": "Faculty research labs and postgraduate project rooms.",
+      "x": 78,
+      "y": 20,
+      "entranceNote": "Entrance on the south side; visitors report at reception.",
+      "accessible": true
+    },
+    {
+      "placeId": "p18",
+      "name": "Health Centre",
+      "category": "admin",
+      "description": "First aid and a visiting doctor on weekdays.",
+      "x": 14,
+      "y": 78,
+      "entranceNote": "Entrance on the north side, marked with a green cross.",
+      "accessible": true
+    },
+    {
+      "placeId": "p19",
+      "name": "Cafe Orion",
+      "category": "food",
+      "description": "Small cafe for coffee and light snacks near the north lawn.",
+      "x": 36,
+      "y": 18,
+      "entranceNote": "Entrance faces the lawn on the east side.",
+      "accessible": true
+    },
+    {
+      "placeId": "p20",
+      "name": "Placement Cell",
+      "category": "admin",
+      "description": "Company visits, interview schedules and career guidance.",
+      "x": 64,
+      "y": 10,
+      "entranceNote": "Use the side door next to the Admin Block car park.",
+      "accessible": true
+    }
+  ],
+  "junctions": [
+    {
+      "junctionId": "j01",
+      "name": "Gate Plaza",
+      "x": 50,
+      "y": 86
+    },
+    {
+      "junctionId": "j02",
+      "name": "South Crossing",
+      "x": 50,
+      "y": 66
+    },
+    {
+      "junctionId": "j03",
+      "name": "Central Plaza",
+      "x": 50,
+      "y": 44
+    },
+    {
+      "junctionId": "j04",
+      "name": "North Crossing",
+      "x": 50,
+      "y": 22
+    },
+    {
+      "junctionId": "j05",
+      "name": "West Crossing",
+      "x": 22,
+      "y": 66
+    },
+    {
+      "junctionId": "j06",
+      "name": "Hostel Crossing",
+      "x": 22,
+      "y": 36
+    },
+    {
+      "junctionId": "j07",
+      "name": "East Crossing",
+      "x": 78,
+      "y": 66
+    },
+    {
+      "junctionId": "j08",
+      "name": "Research Crossing",
+      "x": 78,
+      "y": 36
+    }
+  ],
+  "edges": [
+    {
+      "fromId": "j01",
+      "toId": "j02",
+      "distanceMeters": 80,
+      "instruction": "Walk 80 m north to South Crossing",
+      "reverseInstruction": "Walk 80 m south to Gate Plaza",
+      "stepFree": true
+    },
+    {
+      "fromId": "j02",
+      "toId": "j03",
+      "distanceMeters": 90,
+      "instruction": "Walk 90 m north to Central Plaza",
+      "reverseInstruction": "Walk 90 m south to South Crossing",
+      "stepFree": true
+    },
+    {
+      "fromId": "j03",
+      "toId": "j04",
+      "distanceMeters": 90,
+      "instruction": "Walk 90 m north to North Crossing",
+      "reverseInstruction": "Walk 90 m south to Central Plaza",
+      "stepFree": true
+    },
+    {
+      "fromId": "j02",
+      "toId": "j05",
+      "distanceMeters": 110,
+      "instruction": "Walk 110 m west to West Crossing",
+      "reverseInstruction": "Walk 110 m east to South Crossing",
+      "stepFree": true
+    },
+    {
+      "fromId": "j02",
+      "toId": "j07",
+      "distanceMeters": 110,
+      "instruction": "Walk 110 m east to East Crossing",
+      "reverseInstruction": "Walk 110 m west to South Crossing",
+      "stepFree": true
+    },
+    {
+      "fromId": "j05",
+      "toId": "j06",
+      "distanceMeters": 120,
+      "instruction": "Walk 120 m north to Hostel Crossing",
+      "reverseInstruction": "Walk 120 m south to West Crossing",
+      "stepFree": true
+    },
+    {
+      "fromId": "j07",
+      "toId": "j08",
+      "distanceMeters": 120,
+      "instruction": "Walk 120 m north to Research Crossing",
+      "reverseInstruction": "Walk 120 m south to East Crossing",
+      "stepFree": true
+    },
+    {
+      "fromId": "j03",
+      "toId": "j06",
+      "distanceMeters": 115,
+      "instruction": "Walk 115 m west to Hostel Crossing",
+      "reverseInstruction": "Walk 115 m east to Central Plaza",
+      "stepFree": true
+    },
+    {
+      "fromId": "j03",
+      "toId": "j08",
+      "distanceMeters": 115,
+      "instruction": "Walk 115 m east to Research Crossing",
+      "reverseInstruction": "Walk 115 m west to Central Plaza",
+      "stepFree": true
+    },
+    {
+      "fromId": "j06",
+      "toId": "j04",
+      "distanceMeters": 125,
+      "instruction": "Walk 125 m north-east to North Crossing",
+      "reverseInstruction": "Walk 125 m south-west to Hostel Crossing",
+      "stepFree": false
+    },
+    {
+      "fromId": "j08",
+      "toId": "j04",
+      "distanceMeters": 125,
+      "instruction": "Walk 125 m north-west to North Crossing",
+      "reverseInstruction": "Walk 125 m south-east to Research Crossing",
+      "stepFree": true
+    },
+    {
+      "fromId": "p01",
+      "toId": "j01",
+      "distanceMeters": 30,
+      "instruction": "Walk 30 m north to Gate Plaza",
+      "reverseInstruction": "Walk 30 m south to the Main Gate entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p02",
+      "toId": "j01",
+      "distanceMeters": 55,
+      "instruction": "Walk 55 m east to Gate Plaza",
+      "reverseInstruction": "Walk 55 m west to the Admissions Office entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p03",
+      "toId": "j01",
+      "distanceMeters": 55,
+      "instruction": "Walk 55 m west to Gate Plaza",
+      "reverseInstruction": "Walk 55 m east to the Student Affairs entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p04",
+      "toId": "j02",
+      "distanceMeters": 55,
+      "instruction": "Walk 55 m south-east to South Crossing",
+      "reverseInstruction": "Walk 55 m north-west to the Main Library entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p05",
+      "toId": "j02",
+      "distanceMeters": 60,
+      "instruction": "Walk 60 m south-west to South Crossing",
+      "reverseInstruction": "Walk 60 m north-east to the Lecture Hall A entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p06",
+      "toId": "j03",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m east to Central Plaza",
+      "reverseInstruction": "Walk 50 m west to the Computer Lab entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p07",
+      "toId": "j03",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m west to Central Plaza",
+      "reverseInstruction": "Walk 50 m east to the Innovation Lab entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p08",
+      "toId": "j04",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m south to North Crossing",
+      "reverseInstruction": "Walk 50 m north to the Admin Block entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p09",
+      "toId": "j05",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m east to West Crossing",
+      "reverseInstruction": "Walk 50 m west to the Main Canteen entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p10",
+      "toId": "j05",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m south-east to West Crossing",
+      "reverseInstruction": "Walk 50 m north-west to the Food Court entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p11",
+      "toId": "j06",
+      "distanceMeters": 55,
+      "instruction": "Walk 55 m south-east to Hostel Crossing",
+      "reverseInstruction": "Walk 55 m north-west to the Hostel Block A entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p12",
+      "toId": "j06",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m north-east to Hostel Crossing",
+      "reverseInstruction": "Walk 50 m south-west to the Hostel Block B entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p13",
+      "toId": "j07",
+      "distanceMeters": 50,
+      "instruction": "Walk 50 m west to East Crossing",
+      "reverseInstruction": "Walk 50 m east to the Sports Complex entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p14",
+      "toId": "j07",
+      "distanceMeters": 60,
+      "instruction": "Walk 60 m south-west to East Crossing",
+      "reverseInstruction": "Walk 60 m north-east to the Fitness Centre entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p15",
+      "toId": "j08",
+      "distanceMeters": 55,
+      "instruction": "Walk 55 m west to Research Crossing",
+      "reverseInstruction": "Walk 55 m east to the Basketball Courts entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p16",
+      "toId": "j04",
+      "distanceMeters": 60,
+      "instruction": "Walk 60 m north-west to North Crossing",
+      "reverseInstruction": "Walk 60 m south-east to the Seminar Hall entrance",
+      "stepFree": false
+    },
+    {
+      "fromId": "p17",
+      "toId": "j08",
+      "distanceMeters": 65,
+      "instruction": "Walk 65 m south to Research Crossing",
+      "reverseInstruction": "Walk 65 m north to the Research Centre entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p18",
+      "toId": "j05",
+      "distanceMeters": 60,
+      "instruction": "Walk 60 m north-east to West Crossing",
+      "reverseInstruction": "Walk 60 m south-west to the Health Centre entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p19",
+      "toId": "j04",
+      "distanceMeters": 60,
+      "instruction": "Walk 60 m east to North Crossing",
+      "reverseInstruction": "Walk 60 m west to the Cafe Orion entrance",
+      "stepFree": true
+    },
+    {
+      "fromId": "p20",
+      "toId": "j04",
+      "distanceMeters": 75,
+      "instruction": "Walk 75 m south-west to North Crossing",
+      "reverseInstruction": "Walk 75 m north-east to the Placement Cell entrance",
+      "stepFree": true
+    }
+  ]
+}
